@@ -8,11 +8,7 @@
 import UIKit
 
 extension UIView {
-    func setCornerRadius(radius:CGFloat) {
-        layer.cornerRadius = radius
-        layer.masksToBounds = true
-    }
-    
+
     func getCurrentViewController() -> UIViewController! {
         if let topController = UIApplication.sharedApplication().keyWindow?.rootViewController {
             return topViewController(topController)
@@ -33,10 +29,5 @@ extension UIView {
             return topViewController(presented)
         }
         return vc
-        
-    }
-    
-    static func topView() -> UIView? {
-        return UIApplication.sharedApplication().delegate?.window!
     }
 }
